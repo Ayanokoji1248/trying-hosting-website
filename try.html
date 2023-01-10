@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function validation(){
+            var uname=document.getElementById("name").value;
+
+            if(uname.trim==""){
+                alert("Blank");
+                return false;
+            }
+
+            else if(uname=="krish"){
+                return true;
+            }
+
+            else if(uname!="krish"){
+                alert("Incorrect Uname");
+                return false;
+            }
+        }
+    </script>
+
+    <form action="message.html" onsubmit="return validation()">
+        <label for="uname">Enter your Name:</label>
+        <input type="text" id="name" placeholder="Name">
+        <br>
+        <button>Submit</button>
+    </form>
+
+</body>
+</html>
